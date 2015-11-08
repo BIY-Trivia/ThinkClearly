@@ -5,10 +5,22 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div class="container">
+    <h1> Think Clearly </h1>
+    <h4> The more you wait the more you see, <br>
+    The more you see, the more you lose </h4>
 
-<%= yield %>
+    <!--
+
+    <p class="game-description">(Game Description goes here)</p> -->
+    <%= yield %>
+  </div>
+
 
 </body>
 </html>

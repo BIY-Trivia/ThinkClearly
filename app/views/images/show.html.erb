@@ -1,0 +1,27 @@
+<h2> <%= @image.category.name %> </h2>
+<div id="box">
+  <%= image_tag(@image.image.url, height: 400, alt: "Face Swap" ) %>
+</div>
+
+<div class="buttongroup">
+  <button id="play-button" type="button" class="btn btn-success">Play</button>
+  <button id="pause-button" style="display:none" type="button" class="btn btn-info">Pause</button>
+  <button id="blurry-percentage" style="display:none">0% Blurry</button>
+  <button id="pop-up" style="display:none" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+</div>
+
+ <div id="multiple-choice-options" class="btn-group-vertical" style="display:none;">
+  <%- @image.options.each do |option| %>
+    <button type="button" class="btn btn-primary"><%= option.answer %></button>
+  <%- end %>
+</div>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <h1> You guessed right!</h1>
+      <h4> The correct answer was <%= @image.answer %><br>
+      Your score so far is <b> 78</b>. </h4>
+       <button type="button"  class="btn btn-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Continue Playing</span></button>
+      </div>
+    </div>
+  </div>

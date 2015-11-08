@@ -1,0 +1,10 @@
+.container{
+ text-align: center;
+ }
+.modal-dialog {
+    width: 400px;
+}
+.modal-content {
+    padding: 15px;
+    padding-top: 0;
+}
